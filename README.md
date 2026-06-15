@@ -27,7 +27,11 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/favoranu/ubiquitous-pa
 
 This will create the complete `WaterSortPuzzle/` folder with `Assets/`, docs, etc.
 
-Then open Unity Hub and create a **2D (URP)** project pointing into that folder.
+Then open Unity Hub and create a project pointing into that folder.
+
+**If you don't see "2D URP":**
+- Use the plain **"2D"** template.
+- After opening: Install "Universal RP" via Package Manager, then create **URP Asset (with 2D Renderer)** and assign it in Project Settings > Graphics.
 
 ## Why this project?
 The simplest, fastest path to a polished mobile puzzle game that can start generating revenue (Unity Ads + IAP) to fund larger projects like **Nexus Chess**.

@@ -213,13 +213,30 @@ Ship a polished, addictive water sort puzzle with:
 
 ### 1. Create the Engine Project (do this now)
 **For Unity (recommended for fastest store publishing):**
-- Open **Unity Hub**
-- Create new project → **2D (URP)** template
-- **Important**: Point the location to this exact folder:
-  ````text
+
+**If you see "2D URP" or "Universal 2D" template in Unity Hub → New project:**
+- Select **2D URP** (or "Universal 2D").
+- Point the location exactly to the folder the script created:
+  ```
   $ProjectRoot
-  ````
-  Unity will populate ProjectSettings/, Packages/, etc. The Assets/ folder you see here will become your project Assets.
+  ```
+
+**If you do NOT see "2D URP" (very common):**
+- Choose the plain **"2D"** template instead.
+- After the project opens:
+  1. Go to **Window > Package Manager**
+  2. Search for "**Universal RP**" (make sure you're in Unity Registry)
+  3. Install it.
+  4. When prompted, convert the project to URP.
+  5. Create a proper 2D setup:
+     - Assets > Create > Rendering > **URP Asset (with 2D Renderer)**
+     - Edit > Project Settings > Graphics → assign the new URP asset you just created.
+
+**Important**: Point the location to this exact folder the bootstrap created:
+  ```
+  $ProjectRoot
+  ```
+Unity will use/merge the existing Assets/, Docs/, etc.
 
 **For Godot:**
 - Open Godot 4+
@@ -229,10 +246,10 @@ Ship a polished, addictive water sort puzzle with:
 ### 2. Recommended Project Settings (Unity)
 - Target: Android + iOS
 - Minimum API: 24 (Android), iOS 13+
-- Scripting Backend: IL2CPP
-- Graphics API: Vulkan + OpenGLES3 (Android), Metal (iOS)
-- Enable "Optimized Frame Pacing"
-- Use Unity's 2D URP + addressables or built-in for levels later
+- Scripting Backend: IL2CPP (required for mobile)
+- Graphics: Use the URP 2D Renderer (as set up above)
+- Player Settings: Enable "Optimized Frame Pacing"
+- Later: Add Addressables for levels if you grow beyond ~30-50 levels.
 
 ### Folder Structure
 ```
@@ -392,16 +409,24 @@ Write-File "Docs/LevelDesign.md" $levelsPlan
 $gettingStarted = @"
 # Getting Started After Engine Project Creation
 
-1. Delete Unity's default SampleScene if present.
-2. Create folders under Assets/ matching (or use the ones created by bootstrap).
-3. Create first scene: MainMenu
-4. Implement the absolute minimal vertical slice:
-   - 4 tubes on screen (hard-coded data)
-   - Click-to-select + click-to-pour
-   - Win condition popup
-5. Once the core loop feels good, expand to level loading + 5 tutorial levels.
+## If Unity Hub did not show "2D URP"
+Use the plain "2D" template when creating the project.
+Then inside:
+- Window > Package Manager > install "Universal RP"
+- Assets > Create > Rendering > URP Asset (with 2D Renderer)
+- Edit > Project Settings > Graphics > assign the asset
 
-Reply with "Project created, give me the core architecture" when you're at this point.
+1. The bootstrap already created `Assets/Scripts/`, etc.
+2. Create your first scene `Game`.
+3. Minimal vertical slice:
+   - Set up a few Tubes + LevelManager + GameController
+   - Basic tap-to-pour
+   - Win popup
+4. Expand from there.
+
+See the full Architecture.md for details.
+
+Reply with "Project created, give me the core architecture" when ready for more.
 "@
 Write-File "Docs/GettingStarted.md" $gettingStarted
 
