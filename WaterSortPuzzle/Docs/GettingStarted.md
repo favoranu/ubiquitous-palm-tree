@@ -1,11 +1,17 @@
 # Getting Started After Engine Project Creation
 
-## Creating the Unity Project (if you couldn't find "2D URP")
+## Creating the Unity Project (correct dialog settings to avoid nesting)
+
+**In Unity Hub New project dialog (critical):**
+- **Location**: Select the *parent* folder containing `WaterSortPuzzle` (e.g. `...\mobilegames`).
+- **Project name**: `WaterSortPuzzle`
+
+This makes the existing `WaterSortPuzzle` folder become the Unity project root (merging our prepared `Assets/`, Scripts, Docs, .gitignore, etc.).
+
+If Unity created a nested folder (e.g. `WaterSortPuzzle\Something\Assets\...`), delete the inner nested project folder and recreate using the exact Location + Project name above.
 
 If Unity Hub did not show a **"2D URP"** or **"Universal 2D"** template:
-
-- Choose the regular **"2D"** template.
-- Point it at the `WaterSortPuzzle` folder the bootstrap script created.
+- Choose the regular **"2D"** template (with the Location + Project name settings above).
 - Once inside the editor:
   1. Open **Window → Package Manager**
   2. In the top-left dropdown choose **Unity Registry**

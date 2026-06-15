@@ -23,13 +23,18 @@ Ship a polished, addictive water sort puzzle with:
 ### 1. Create the Engine Project (do this now)
 **For Unity (recommended for fastest store publishing):**
 
+**Critical: Set the Unity Hub dialog correctly to use this prepared folder (prevents Unity creating a nested subfolder):**
+- **Location**: Browse to the *parent* directory that contains `WaterSortPuzzle` (e.g. your `mobilegames` folder).
+- **Project name**: `WaterSortPuzzle`
+
+This way Unity initializes the project root *exactly* at the `WaterSortPuzzle` folder the bootstrap prepared, merging the existing `Assets/`, scripts, .gitignore, and `Docs/`.
+
 **If you see "2D URP" / "Universal 2D" in Unity Hub New project:**
-- Select **2D URP** (or Universal 2D).
-- Point exactly to this folder: `C:\Users\klslc\GROK\mobilegames\WaterSortPuzzle`
+- Select **2D URP** (or Universal 2D) + use the Location + Project name above.
 
 **Most common case — "2D URP" is missing:**
-- Select the plain **"2D"** template.
-- After it opens (in the WaterSortPuzzle folder):
+- Select the plain **"2D"** template + use the Location + Project name above.
+- After it opens:
   1. **Window > Package Manager**
   2. Search for "**Universal RP**" → Install
   3. Convert the project to URP when asked.

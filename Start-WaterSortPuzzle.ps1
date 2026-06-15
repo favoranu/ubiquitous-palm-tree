@@ -214,15 +214,17 @@ Ship a polished, addictive water sort puzzle with:
 ### 1. Create the Engine Project (do this now)
 **For Unity (recommended for fastest store publishing):**
 
-**If you see "2D URP" or "Universal 2D" template in Unity Hub → New project:**
-- Select **2D URP** (or "Universal 2D").
-- Point the location exactly to the folder the script created:
-  ```
-  $ProjectRoot
-  ```
+**Critical — Unity Hub "New project" dialog settings (this prevents Unity creating a nested sub-folder inside the prepared folder):**
+- **Location**: Browse to the *parent* directory that contains the folder the script created (e.g. the directory you were in when you ran the .ps1).
+- **Project name**: Enter exactly the value you passed to -ProjectName (default: WaterSortPuzzle).
+
+Unity will then use the existing prepared folder as the project root and merge our `Assets/`, starter scripts, `Docs/`, `.gitignore`, etc.
+
+**If you see "2D URP" or "Universal 2D" template:**
+- Select it + use the Location + Project name settings above.
 
 **If you do NOT see "2D URP" (very common):**
-- Choose the plain **"2D"** template instead.
+- Choose the plain **"2D"** template + use the Location + Project name settings above.
 - After the project opens:
   1. Go to **Window > Package Manager**
   2. Search for "**Universal RP**" (make sure you're in Unity Registry)
@@ -231,12 +233,6 @@ Ship a polished, addictive water sort puzzle with:
   5. Create a proper 2D setup:
      - Assets > Create > Rendering > **URP Asset (with 2D Renderer)**
      - Edit > Project Settings > Graphics → assign the new URP asset you just created.
-
-**Important**: Point the location to this exact folder the bootstrap created:
-  ```
-  $ProjectRoot
-  ```
-Unity will use/merge the existing Assets/, Docs/, etc.
 
 **For Godot:**
 - Open Godot 4+

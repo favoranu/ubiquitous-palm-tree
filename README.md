@@ -27,7 +27,13 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/favoranu/ubiquitous-pa
 
 This will create the complete `WaterSortPuzzle/` folder with `Assets/`, docs, etc.
 
-Then open Unity Hub and create a project pointing into that folder.
+Then open Unity Hub and create a project **pointing into that exact folder** (to avoid nesting a subfolder):
+
+**Important Unity Hub dialog settings:**
+- **Location**: Choose the folder *that contains* the `WaterSortPuzzle` directory (e.g. your `mobilegames` folder).
+- **Project name**: Enter exactly `WaterSortPuzzle`.
+
+Unity will then use the existing `WaterSortPuzzle` folder as the project root and merge in the pre-created `Assets/`, `Docs/`, `.gitignore`, etc.
 
 **If you don't see "2D URP":**
 - Use the plain **"2D"** template.
