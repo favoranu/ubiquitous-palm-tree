@@ -16,13 +16,26 @@ Ship a polished, addictive water sort puzzle with:
 
 ### 1. Create the Engine Project (do this now)
 **For Unity (recommended for fastest store publishing):**
-- Open **Unity Hub**
-- Create new project → **2D (URP)** template
-- **Important**: Point the location to this exact folder:
-  ``text
-  C:\Users\klslc\GROK\mobilegames\WaterSortPuzzle
-  ``
-  Unity will populate ProjectSettings/, Packages/, etc. The Assets/ folder you see here will become your project Assets.
+
+You are likely hitting **"A project with this name already exists at this location"**.
+
+The bootstrap pre-created the `WaterSortPuzzle` folder, so Unity Hub blocks creating another project with that name there.
+
+**Exact steps to fix:**
+1. Close Unity Hub.
+2. In Explorer, rename `WaterSortPuzzle` (inside mobilegames) to `WaterSortPuzzle_scaffold`.
+3. Unity Hub → New project:
+   - **Location**: `C:\Users\klslc\GROK\mobilegames` (the parent)
+   - **Project name**: `WaterSortPuzzle`
+   - Template: **2D** (use this; 2D URP may not show)
+4. Create the project. Unity makes a fresh `WaterSortPuzzle` with its own files.
+5. Open it.
+6. Copy from `_scaffold`:
+   - `Assets/Scripts/` *.cs files → new project's `Assets/Scripts/`
+   - `Docs/` folder → project root
+   - Root `README.md` and `.gitignore` → project root
+7. Delete the `_scaffold` folder.
+8. In Unity: scripts will import. Set up URP next.
 
 **For Godot:**
 - Open Godot 4+

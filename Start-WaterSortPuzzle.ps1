@@ -513,10 +513,11 @@ Write-Host "Project folder: $ProjectRoot" -ForegroundColor White
 Write-Host ""
 Write-Host "Next actions:" -ForegroundColor Yellow
 Write-Host "  1. Open Unity Hub (recommended) or Godot" -ForegroundColor White
-Write-Host "  2. Create a new 2D (URP) / Godot project with:" -ForegroundColor White
-Write-Host "     - Location: parent of the folder above (e.g. the dir you ran the script from)" -ForegroundColor Cyan
-Write-Host "     - Project name: WaterSortPuzzle (or your -ProjectName)" -ForegroundColor Cyan
-Write-Host "     This uses the prepared folder as the project root." -ForegroundColor Cyan
+Write-Host "  2. Create the Unity project carefully (the 'already exists' error is common because the folder pre-exists):" -ForegroundColor White
+Write-Host "     - Rename existing WaterSortPuzzle to WaterSortPuzzle_scaffold if present." -ForegroundColor Cyan
+Write-Host "     - Unity Hub New: Location = parent dir (mobilegames), Project name = WaterSortPuzzle, template 2D." -ForegroundColor Cyan
+Write-Host "     - After open: copy Scripts/*.cs from scaffold to new Assets/Scripts/, Docs/ + README + .gitignore to root." -ForegroundColor Cyan
+Write-Host "     - Delete _scaffold." -ForegroundColor Cyan
 Write-Host "  3. Once the engine project exists, come back here and reply with:" -ForegroundColor White
 Write-Host ""
 Write-Host '     "Project created, give me the core architecture"' -ForegroundColor Magenta
