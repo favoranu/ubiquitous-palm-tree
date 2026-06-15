@@ -191,7 +191,15 @@ $readme = @"
 
 **The simplest, fastest, and most reliable puzzle game to publish on Android + iOS and start generating revenue for Nexus Chess.**
 
-This project was bootstrapped with the official Start-WaterSortPuzzle.ps1 script.
+**Source:** https://github.com/favoranu/ubiquitous-palm-tree
+
+This project was bootstrapped with the official Start-WaterSortPuzzle.ps1 script (hosted at the root of the repo above).
+
+**One-liner to get the latest bootstrapper:**
+```powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/favoranu/ubiquitous-palm-tree/main/Start-WaterSortPuzzle.ps1" -OutFile "Start-WaterSortPuzzle.ps1"
+.\Start-WaterSortPuzzle.ps1 -ProjectName "$ProjectName" -Engine "$Engine"
+```
 
 ## Project Goal
 Ship a polished, addictive water sort puzzle with:
