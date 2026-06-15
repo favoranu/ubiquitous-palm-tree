@@ -1,32 +1,5 @@
 # Getting Started After Engine Project Creation
 
-## Creating the Unity Project (correct dialog settings to avoid nesting)
-
-**In Unity Hub New project dialog (critical):**
-- **Location**: Select the *parent* folder containing `WaterSortPuzzle` (e.g. `...\mobilegames`).
-- **Project name**: `WaterSortPuzzle`
-
-This makes the existing `WaterSortPuzzle` folder become the Unity project root (merging our prepared `Assets/`, Scripts, Docs, .gitignore, etc.).
-
-If Unity created a nested folder (e.g. `WaterSortPuzzle\Something\Assets\...`), delete the inner nested project folder and recreate using the exact Location + Project name above.
-
-If Unity Hub did not show a **"2D URP"** or **"Universal 2D"** template:
-- Choose the regular **"2D"** template (with the Location + Project name settings above).
-- Once inside the editor:
-  1. Open **Window → Package Manager**
-  2. In the top-left dropdown choose **Unity Registry**
-  3. Search for "**Universal RP**" and install it.
-  4. Accept the prompt to convert the project to the Universal Render Pipeline.
-  5. Create a 2D-ready pipeline asset:
-     - Right-click in Project window → **Create → Rendering → URP Asset (with 2D Renderer)**
-     - Name it e.g. `Main2D_URP`
-  6. Go to **Edit → Project Settings → Graphics** and assign the new asset you created.
-  7. (Optional but recommended for 2D) In the same URP asset, make sure it uses the 2D Renderer for 2D scenes.
-
-This gives you modern mobile-friendly 2D rendering with URP.
-
----
-
 1. Delete Unity's default SampleScene if present (or keep for reference).
 2. The bootstrap already created the recommended `Assets/Scripts/`, `Assets/Scenes/`, etc.
 3. Create your first scene called `Game` (or `LevelScene`).

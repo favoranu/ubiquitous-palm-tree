@@ -513,8 +513,10 @@ Write-Host "Project folder: $ProjectRoot" -ForegroundColor White
 Write-Host ""
 Write-Host "Next actions:" -ForegroundColor Yellow
 Write-Host "  1. Open Unity Hub (recommended) or Godot" -ForegroundColor White
-Write-Host "  2. Create a new 2D (URP) / Godot project pointing EXACTLY to:" -ForegroundColor White
-Write-Host "     $ProjectRoot" -ForegroundColor Cyan
+Write-Host "  2. Create a new 2D (URP) / Godot project with:" -ForegroundColor White
+Write-Host "     - Location: parent of the folder above (e.g. the dir you ran the script from)" -ForegroundColor Cyan
+Write-Host "     - Project name: WaterSortPuzzle (or your -ProjectName)" -ForegroundColor Cyan
+Write-Host "     This uses the prepared folder as the project root." -ForegroundColor Cyan
 Write-Host "  3. Once the engine project exists, come back here and reply with:" -ForegroundColor White
 Write-Host ""
 Write-Host '     "Project created, give me the core architecture"' -ForegroundColor Magenta
