@@ -1,0 +1,33 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+
+# Unity packages / cache
+*.apk
+*.aab
+*.unitypackage
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# Builds we intentionally keep
+# Builds/   <-- we want to track release notes, but not the actual player data
+
+# Water Sort specific (add your own generated data here if needed)
+# Assets/Art/Generated/
