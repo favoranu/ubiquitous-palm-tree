@@ -1,11 +1,11 @@
-# ubiquitous-palm-tree
+﻿# ubiquitous-palm-tree
 
 **Water Sort Puzzle bootstrap + project**
 
 This repository hosts:
 
-- `Start-WaterSortPuzzle.ps1` — the official bootstrap script (one-liner installer for the game project structure)
-- `WaterSortPuzzle/` — a fully generated starter project (Unity-focused with Godot notes) including:
+- `Start-WaterSortPuzzle.ps1` â€” the official bootstrap script (one-liner installer for the game project structure)
+- `WaterSortPuzzle/` â€” a fully generated starter project (Unity-focused with Godot notes) including:
   - Professional folder structure
   - Core C# game logic (Tube, LevelManager, LevelData, GameController) with working pour logic, undo, and win detection
   - Detailed documentation (Architecture, Monetization, Level Design plan for 30 levels, Getting Started)
@@ -43,9 +43,9 @@ Unity will then use the existing `WaterSortPuzzle` folder as the project root an
 The simplest, fastest path to a polished mobile puzzle game that can start generating revenue (Unity Ads + IAP) to fund larger projects like **Nexus Chess**.
 
 ## Contents
-- `Start-WaterSortPuzzle.ps1` — The bootstrap script (always the source of truth for new projects)
-- `WaterSortPuzzle/` — Reference implementation + starter code + full docs
-- `LICENSE` — MIT
+- `Start-WaterSortPuzzle.ps1` â€” The bootstrap script (always the source of truth for new projects)
+- `WaterSortPuzzle/` â€” Reference implementation + starter code + full docs
+- `LICENSE` â€” MIT
 
 ## Next
 After you create the engine project inside the generated folder, reply with:
@@ -61,11 +61,6 @@ Let's ship fast and profitably.
 
 *Part of the PIIS / mobile games revenue engine.*
 
-## Philosophy & Frequency
 
-Abundant by nature. For the greater good and for humanity.
 
-I AM.
-
-This bootstrap is part of a larger journey of creation and service. See the [main profile](https://github.com/favoranu) for the full picture and hidden doors.
 
