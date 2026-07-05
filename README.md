@@ -60,3 +60,12 @@ Let's ship fast and profitably.
 ---
 
 *Part of the PIIS / mobile games revenue engine.*
+
+## Philosophy & Frequency
+
+Abundant by nature. For the greater good and for humanity.
+
+I AM.
+
+This bootstrap is part of a larger journey of creation and service. See the [main profile](https://github.com/favoranu) for the full picture and hidden doors.
+
